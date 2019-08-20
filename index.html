@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://use.typekit.net/pkd7yhc.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: neue-haas-grotesk-text, sans-serif;
+                padding: 56px 120px;
+            }
+
+            h1 {
+                font-weight: 700;
+            }
+
+            h2 {
+                font-weight: 400;
+            }
+
+            h3 {
+                font-weight: 500;
+            }
+
+            a {
+                font-weight: 700;
+            }
+
+            p {
+                font-weight: 500;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            header {
+                display: flex;
+                justify-self: flex-end;
+            }
+
+            header h1 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            header h2 {
+                font-size: 16px;
+                line-height: 28px;
+            }
+
+            header section {
+                width: 100%;
+            }
+
+            header a {
+                margin-left: 136px;
+                font-size: 20px;
+                line-height: 24px;
+                cursor: pointer;
+            }
+
+            .box {
+                position: absolute;
+                padding: 24px 32px;
+                background: white;
+                border: 2.5px solid black;
+            }
+
+            .box-secondary {
+                background: #FFE2D9;
+            }
+
+            .box-dismissible {
+                padding-top: 53px;
+            }
+
+            .box-dismissible section {
+                position: absolute;
+                top: -2.5px;
+                left: -2.5px;
+                width: calc(100% + 5px);
+                background: white;
+                border: 2.5px solid black;
+                outline: none;
+                cursor: default;
+            }
+
+            .box-dismissible section img {
+                float: right;
+                padding: 8px;
+                cursor: pointer;
+            }
+
+            .box-about {
+                padding-bottom: 160px;
+            }
+
+            .box-about p {
+                max-width: 320px;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+
+            .box-me {
+                display: inline-block;
+                padding: 20px;
+            }
+
+            .box-me img {
+                height: 330px;
+                width: 282px;
+            }
+
+            .box-contact {
+                padding-right: 160px;
+                padding-bottom: 224px;
+            }
+
+            .box-contact h1 {
+                margin-bottom: 24px;
+                font-size: 48px;
+                line-height: 52px;
+            }
+
+            .box-contact p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .box-contact a {
+                color: #FF4422;
+            }
+
+            .box-work-in-progress p {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .box-work {
+                padding-right: 136px;
+                padding-bottom: 136px;
+            }
+
+            .box-work h1 {
+                margin-bottom: 12px;
+                font-size: 32px;
+                line-height: 36px;
+            }
+
+            .box-work h2 {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            .box-work img {
+                vertical-align: middle;
+            }
+
+            .box-random {
+                padding-bottom: 8px;
+            }
+
+            .box-random strong {
+                display: block;
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+
+            .box-random > img {
+                height: 160px;
+                width: 160px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <section>
+                <h1>Sunny Lee</h1>
+                <h2>Designer</h2>
+            </section>
+            <a data-box="about">About</a>
+            <a data-box="contact">Contact</a>
+            <a data-box="random">Random</a>
+        </header>
+        <figure class="box box-me" data-x="426" data-y="108">
+            <img src="img/me.jpg">
+        </figure>
+        <section class="box box-dismissible box-about" data-x="120" data-y="244">
+            <section>
+                <img src="img/icon-close.svg">
+            </section>
+            <p>
+                I am a designer specializing in digital products. My superpower is designing beautiful solutions that engages users. Creating what I love makes me happy and I like to get inspired everyday!
+            </p>
+        </section>
+        <section class="box box-secondary box-dismissible box-contact" data-x="840" data-y="200">
+            <section>
+                <img src="img/icon-close.svg">
+            </section>
+            <h1>Say Hi!</h1>
+            <p>
+                or feel free to request work samples:)
+                <br>
+                <a href="mailto:sunny@sunnyleedesign.com">sunny@sunnyleedesign.com</a>
+            </p>
+        </section>
+        <section class="box box-work-in-progress" data-x="548" data-y="552">
+            <p>
+                This site is in working progress.
+                <br>
+                Come back soon!
+            </p>
+        </section>
+        <section class="box box-secondary box-work" data-x="224" data-y="720">
+            <h1>Currently working <img src="img/icon-arrow.svg"> Huge</h1>
+            <h2>Previously worked <img src="img/icon-arrow.svg"> CNN</h2>
+        </section>
+        <section class="box box-dismissible box-random" data-x="1032" data-y="640">
+            <section>
+                <img src="img/icon-close.svg">
+            </section>
+            <strong>RANDOM IMAGE</strong>
+            <img>
+        </section>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        const $ABOUT_BOX = $('.box-about').clone();
+        const $CONTACT_BOX = $('.box-contact').clone();
+        const $RANDOM_BOX = $('.box-random').clone();
+        let zIndexStack = 0;
+
+        $('body')
+            .on('mousedown', '.box', function () {
+                $(this).css('z-index', ++zIndexStack);
+            })
+            .on('click', '.box-dismissible section img', function () {
+                $(this).parents('.box-dismissible').remove();
+            });
+        $('header a').on('click', function () {
+            const box = $(this).data().box;
+
+            if (box === 'about') {
+                if (!$('.box-about')[0]) {
+                    $ABOUT_BOX.insertAfter($('.box-me'));
+
+                    assignPosition($ABOUT_BOX);
+                } else {
+                    assignPosition($('.box-about'));
+                }
+            } else if (box === 'contact') {
+                if (!$('.box-contact')[0]) {
+                    $CONTACT_BOX.insertAfter($('.box-me'));
+
+                    assignPosition($CONTACT_BOX);
+                } else {
+                    assignPosition($('.box-contact'));
+                }
+            } else if (box === 'random') {
+                const $newRandomBox = $RANDOM_BOX.clone();
+
+                assignRandomImage($newRandomBox.find('> img'));
+                $('body').append($newRandomBox);
+
+                const maxX = $(window).width() - $newRandomBox.width();
+                const maxY = $(window).height() - $newRandomBox.height();
+
+                $newRandomBox.data({
+                    x: getRandomNumber(maxX),
+                    y: getRandomNumber(maxY)
+                });
+                assignPosition($newRandomBox);
+            }
+        });
+        $('.box').each((_, box) => {
+            $box = $(box);
+
+            $box.css({
+                left: `${$box.data().x}px`,
+                top: `${$box.data().y}px`
+            });
+            $box.draggable();
+        });
+        assignRandomImage($('.box-random > img'));
+
+        function assignPosition($box) {
+            $box.css({
+                left: `${$box.data().x}px`,
+                top: `${$box.data().y}px`
+            });
+            $box.css('z-index', ++zIndexStack);
+            $box.draggable();
+        }
+
+        function assignRandomImage($box) {
+            $box.attr('src', getRandomImageUrl());
+        }
+
+        function getRandomImageUrl() {
+            const PIXEL_IMAGES = [
+                'cat',
+                'cherry',
+                'cool',
+                'cute',
+                'fries',
+                'ghost',
+                'hand',
+                'heart',
+                'icecream',
+                'mushroom',
+                'smile',
+                'yeah'
+            ];
+            const imageIndex = getRandomNumber(12);
+
+            return `img/pixel-${PIXEL_IMAGES[imageIndex]}.png`;
+        }
+
+        function getRandomNumber(max) {
+            return Math.floor(Math.random() * (max -0.01));
+        }
+    </script>
+</html>
